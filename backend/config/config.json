@@ -1,0 +1,16 @@
+{
+  "development": {
+    "username": "mosaico",
+    "password": "secret",
+    "database": "mosaico",
+    "host": "db",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "vcgsyxpsmy",
+    "password": "EbFhStMv3P",
+    "database": "vcgsyxpsmy",
+    "host": "localhost",
+    "dialect": "mysql"
+  }
+}

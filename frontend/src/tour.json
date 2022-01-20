@@ -1,0 +1,178 @@
+{
+    "stages": [
+        {
+            "title": "Mosaico",
+            "description": "Aquí veras y podrás interactuar con el mosaico. Haz scroll para navegar entre mosaicos.",
+            "element": "scene",
+            "breakpoints": {
+                "movil": {
+                    "arrowPosition": {
+                        "x": "left",
+                        "y": "bottom-inner",
+                        "dir": 90
+                    },
+                    "tooltipPosition": {
+                        "y": "top",
+                        "x": "left-inner"
+                    }
+                },
+                "pc": {
+                    "arrowPosition": {
+                        "x": "left",
+                        "y": "top-inner",
+                        "dir": -90
+                    },
+                    "tooltipPosition": {
+                        "y": "bottom",
+                        "x": "left-inner"
+                    }
+                }
+            }
+        },
+        {
+            "title": "Galeria",
+            "description": "Aquí puedes navegar entre los distintos mosaicos.",
+            "element": "slider-wrapper",
+            "breakpoints": {
+                "movil": {
+                    "arrowPosition": {
+                        "x": "left",
+                        "y": "bottom-inner",
+                        "dir": 90
+                    },
+                    "tooltipPosition": {
+                        "y": "top",
+                        "x": "center"
+                    }
+                },
+                "pc": {
+                    "arrowPosition": {
+                        "x": "left",
+                        "y": "bottom-inner",
+                        "dir": 90
+                    },
+                    "tooltipPosition": {
+                        "y": "top",
+                        "x": "left-inner"
+                    }
+                }
+            }
+        },
+        {
+            "title": "Buscar",
+            "description": "Pulsa para descubrir nuevos mosaicos",
+            "element": "btnSearch",
+            "breakpoints": {
+                "movil": {
+                    "arrowPosition": {
+                        "x": "right",
+                        "y": "top-inner",
+                        "dir": 0
+                    },
+                    "tooltipPosition": {
+                        "y": "top-inner",
+                        "x": "left"
+                    }
+                },
+                "pc": {
+                    "arrowPosition": {
+                        "x": "right",
+                        "y": "top-inner",
+                        "dir": 0
+                    },
+                    "tooltipPosition": {
+                        "y": "top-inner",
+                        "x": "left"
+                    }
+                }
+            }
+        },
+        {
+            "title": "Pantalla Completa",
+            "description": "Pulsa para modo Pantalla Completa",
+            "element": "btnFullScreen",
+            "breakpoints": {
+                "movil": {
+                    "arrowPosition": {
+                        "x": "right",
+                        "y": "top-inner",
+                        "dir": 0
+                    },
+                    "tooltipPosition": {
+                        "y": "top-inner",
+                        "x": "left"
+                    }
+                },
+                "pc": {
+                    "arrowPosition": {
+                        "x": "right",
+                        "y": "top-inner",
+                        "dir": 0
+                    },
+                    "tooltipPosition": {
+                        "y": "top-inner",
+                        "x": "left"
+                    }
+                }
+            }
+        },
+        {
+            "title": "Acercar",
+            "description": "Pulsa para acercar",
+            "element": "btnZoomIn",
+            "breakpoints": {
+                "movil": {
+                    "arrowPosition": {
+                        "x": "right",
+                        "y": "top-inner",
+                        "dir": 0
+                    },
+                    "tooltipPosition": {
+                        "y": "top-inner",
+                        "x": "left"
+                    }
+                },
+                "pc": {
+                    "arrowPosition": {
+                        "x": "right",
+                        "y": "top-inner",
+                        "dir": 0
+                    },
+                    "tooltipPosition": {
+                        "y": "top-inner",
+                        "x": "left"
+                    }
+                }
+            }
+        },
+        {
+            "title": "Alejar",
+            "description": "Pulsa para alejar",
+            "element": "btnZoomOut",
+            "breakpoints": {
+                "movil": {
+                    "arrowPosition": {
+                        "x": "right",
+                        "y": "top-inner",
+                        "dir": 0
+                    },
+                    "tooltipPosition": {
+                        "y": "top-inner",
+                        "x": "left"
+                    }
+                },
+                "pc": {
+                    "arrowPosition": {
+                        "x": "right",
+                        "y": "top-inner",
+                        "dir": 0
+                    },
+                    "tooltipPosition": {
+                        "y": "top-inner",
+                        "x": "left"
+                    }
+                }
+            }
+        }
+    ]
+}

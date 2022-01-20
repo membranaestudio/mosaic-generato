@@ -1,0 +1,2 @@
+Document.prototype.addSlideToPrimary=function(e){const t=this.createElement("li");t.style.display="none";const s=this.createElement("img");return s.src=e,t.classList.add("splide__slide"),t.append(s),this.getElementsByClassName("splide__list")[0].append(t),t},HTMLCollection.prototype.showUp=function(){for(const e of this)e.style.display="block"};
+//# sourceMappingURL=bundle.76baa28f8e4cae28c091.js.map

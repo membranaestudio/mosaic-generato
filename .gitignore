@@ -1,0 +1,6 @@
+**/*.jpg
+mysql/*
+**/.vscode
+**/.eslintrc.js
+**/*.zip
+backend/.env

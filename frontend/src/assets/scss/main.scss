@@ -1,0 +1,76 @@
+@import 'variables';
+@import 'carousel';
+@import 'scene';
+@import 'loader';
+@import 'tooltip';
+
+html {
+    height: 100vh;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: $secondary_color;
+    font-family: 'Membrana Estudio Regular';
+}
+
+body#settings {
+    padding: 1em;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    z-index: 1;
+    padding: 20px 0;
+
+    img {
+        margin-left: 30px;
+        
+    }
+
+    a {
+        color: white;
+        border-bottom: 1px solid white;
+        padding-bottom: 5px;
+        align-self: center;
+        margin-right: 4em;
+        font-size: 1.1em;
+        font-family: 'Membrana Estudio Semibold';
+
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+}
+
+.flex {
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        a {
+            margin-right: 15px;
+            font-size: 10px;
+        }
+        img {
+            width: 140px;
+        }
+    }   
+}

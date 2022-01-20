@@ -1,0 +1,17 @@
+$main_color: orange;
+$secondary_color: #152581;
+
+@font-face {
+    font-family: 'Membrana Estudio Regular';
+    src: url('../fonts/ProximaNova-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Membrana Estudio Bold';
+    src: url('../fonts/ProximaNova-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Membrana Estudio SemiBold';
+    src: url('../fonts/ProximaNova-Semibold.otf') format('opentype');
+}

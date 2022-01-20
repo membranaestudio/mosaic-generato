@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mosaico</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/css/splide.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/css/themes/splide-default.min.css">
+    <style>
+        .loader,
+        .loader:after {
+            border-radius: 50%;
+            width: 7em;
+            height: 7em;
+        }
+
+        .loader {
+            margin: 20px auto;
+            font-size: 7px;
+            position: relative;
+            text-indent: -9999em;
+            border-top: 0.8em solid rgba(255, 255, 255, 0.2);
+            border-right: 0.8em solid rgba(255, 255, 255, 0.2);
+            border-bottom: 0.8em solid rgba(255, 255, 255, 0.2);
+            border-left: 0.8em solid #ffffff;
+            -webkit-transform: translateZ(0);
+            -ms-transform: translateZ(0);
+            transform: translateZ(0);
+            -webkit-animation: load8 1.1s infinite linear;
+            animation: load8 1.1s infinite linear;
+        }
+
+        @-webkit-keyframes load8 {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes load8 {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header style="visibility: hidden;" class="flex" id="header">
+        <img src="/logo_mustakis.png" width="230" />
+        <a href="https://www.fundacionmustakis.org/" target="_blank" id="header-link">VOLVER A LA FUNDACION</a>
+    </header>
+    <section id="carousel" class="carousel loading">
+        <div id="scene"
+            data-position='{"arx": "left","ary": "top-inner","ard": "-90","y": "bottom", "x": "left-inner"}'
+            class="tour">
+            <canvas class="relative" data-title="Mosaico"
+                data-intro="Aqui veras y podras interactuar con el mosaico" id="mosaico"></canvas>
+        </div>
+    </section>
+    <!-- <div id="wrapper">
+    </div> -->
+    <div id="slider-wrapper" class="relative tour"
+        data-position='{"arx": "left","ary": "bottom-inner","ard": "90","y": "top", "x": "left-inner"}'>
+        <div id="slider" class="splide">
+            <div class="splide__arrows">
+                <button class="splide__arrow splide__arrow--prev">
+                    <img src="/flecha_blanca_izquierda.png" width="40" />
+                </button>
+                <button class="splide__arrow splide__arrow--next">
+                    <img src="/flecha_blanca_derecha.png" width="40" />
+                </button>
+            </div>
+            <div class="splide__track">
+                <ul class="splide__list"></ul>
+            </div>
+        </div>
+    </div>
+    <div class="buttons">
+        <button class="relative btnNoStyles hover-image" id="btnFullScreen">
+            <div></div>
+        </button>
+        <button data-position='{"arx": "right","ary": "top-inner","ard": "0","y": "top-inner", "x": "left"}'
+            class="tour relative btnNoStyles hover-image" data-title="Zoom"
+            data-intro="Pulsa aqui para acercarte al mosaico" id="btnZoomIn">
+            <div></div>
+        </button>
+        <button data-position='{"arx": "right","ary": "top-inner","ard": "0","y": "top-inner", "x": "left"}'
+            class="tour relative btnNoStyles hover-image" data-title="Zoom"
+            data-intro="Pulsa aqui para alejarte del mosaico" id="btnZoomOut">
+            <div></div>
+        </button>
+        <button class="relative btnNoStyles hover-image" id="btnResetZoom">
+            <div></div>
+        </button>
+    </div>
+    <button data-position='{"arx": "right","ary": "top-inner","ard": "0","y": "top-inner", "x": "left"}'
+        class="relative tour" data-title="Busca" data-intro="Pulsa aqui para conseguir la imagen que buscas"
+        id="btnSearch"></button>
+    <div id="tooltip-wrapper">
+        <div id="tooltip">
+            <div id="arrow"></div>
+            <button id="clear-overlay"><img src="/cerrar_blanco_lightbox.png" /></button>
+            <h2 id="title"></h2>
+            <p id="description"></p>
+            <div id="buttons">
+                <button id="tooltipPrev">ANTERIOR</button>
+                <ul id="bullets">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <button id="tooltipNext">SIGUIENTE</button>
+            </div>
+        </div>
+        <div id="modal"></div>
+        <div id="overlay"></div>
+    </div>
+    <div id="loader-wrapper"
+        style="display: flex;position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index: 99999;background-color: #152581;flex-direction: column;justify-content: center;align-items: center;opacity: 1;transition: all 0.6s ease;">
+        <div style="display: flex; justify-content: center; flex-direction: column;">
+            <div id="loader" class="loader"></div>
+            <div style="flex:1" id="logo" class="text-center"><a href="#" id="logo-link" rel="noopener noreferrer"><img
+                        src="/logo_mustakis.png" /></a></div>
+        </div>
+    </div>
+</body>
+
+</html>

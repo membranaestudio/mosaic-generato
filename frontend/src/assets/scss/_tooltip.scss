@@ -1,0 +1,164 @@
+#modal{
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 50;
+    inset:  0px;     
+}
+
+#overlay{
+    box-sizing: border-box;
+    display: block;
+    border-radius: .3em;
+    position: absolute;
+    box-shadow:  rgb(0 0 0 / 80%) 0px 0px 1px 2px, rgb(0 0 0 / 80%) 0px 0px 0px 5000px;;
+    width: 100px;
+    height: 100px;
+    top: 50px;
+    left: 50px;
+    z-index: 51;
+    transition: all .3s ease-out;
+    border: 2px solid $main_color;
+}
+
+#tooltip-wrapper {
+    #arrow {
+        background-image: url('../images/flecha_amarilla_derecha.png');
+        background-repeat: no-repeat;
+        background-size: 90% 60%;
+        background-position: center;
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        z-index: 99;
+    }
+    #tooltip {
+        box-shadow: 2px 2px 10px #fff8;
+        border-radius: 10px;
+        background-color: $main_color;
+        position: absolute;
+        z-index: 52;
+        top: 0;
+        left: 0;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Membrana Estudio SemiBold';
+        width: 400px;
+    
+        > button {
+            position: absolute;
+            top: 0.5em;
+            right: 0.3em;
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-weight: bold;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    
+        #title {
+            text-align: center;
+            font-size: 1.1em;
+        }
+    
+        #description {
+            padding: 0 15px;
+            text-align: center;
+            margin: 0;
+        }
+    
+        #buttons {
+            border-top: 1px solid white;
+            background-color: $secondary_color;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+
+            #bullets {
+                padding: 0;
+                li {
+                    width: 8px;
+                    height: 8px;
+                    display: inline-block;
+                    margin: 0 2px;
+                    border-radius: 99999px;
+                    border: 1px solid white;
+
+                    &.active {
+                        background-color: #fff;
+                    }
+                }
+            }
+            
+            button {
+                font-size: 0.75em;
+                color: white;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                font-family: 'Membrana Estudio Bold';
+    
+                &.disabled {
+                    color: #fff7;
+                }
+            }
+        }
+    }
+}
+
+#clear-overlay {
+    > img {
+        width: 1em;
+        height: 1em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #tooltip-wrapper {
+        #tooltip {
+            width: 200px;
+
+            #title {
+                margin: 8px 0;
+                font-size: 0.9em;
+            }
+
+            #clear-overlay {
+                > img {
+                    width: 0.7em;
+                    height: 0.7em;
+                }
+            }
+
+            #description {
+                padding: 3px;
+                font-size: 0.8em;
+                margin: 3px 0;
+            }
+            
+            #buttons {
+                button {
+                    font-size: 0.6em;
+                }
+
+                #bullets {
+                    display: flex;
+    
+                    li {
+                        width: 4px;
+                        height: 4px;
+                    }
+                }
+            }
+
+        }
+    }
+}

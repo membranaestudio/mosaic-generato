@@ -1,0 +1,66 @@
+version: '3.9'
+
+networks:
+    mosaico:
+
+services:
+    db:
+        image: mysql:5.7
+        container_name: mosaico_db
+        restart: unless-stopped
+        tty: true
+        volumes:
+            - ./mysql:/var/lib/mysql
+        ports:
+            - "3306:3306"
+        environment:
+            MYSQL_DATABASE: mosaico
+            MYSQL_USER: mosaico
+            MYSQL_PASSWORD: secret
+            MYSQL_ROOT_PASSWORD: secret
+            SERVICE_TAGS: dev
+            SERVICE_NAME: mysql
+        networks:
+            - mosaico
+    
+    phpmyadmin:
+        depends_on:
+            - db
+        image: phpmyadmin/phpmyadmin
+        restart: always
+        ports:
+            - 8088:80
+        environment:
+            PMA_HOST: db
+            MYSQL_ROOT_PASSWORD: secret
+        networks:
+            - mosaico
+
+    frontend:
+        build:
+            context: ./frontend
+        container_name: frontend_mosaico
+        ports:
+            - 3000:3000
+        volumes:
+            - ./frontend:/app
+            - /app/node_modules
+        networks:
+            - mosaico
+        depends_on:
+            - backend
+    
+    backend:
+        build:
+            context: ./backend
+        container_name: backend_mosaico
+        ports:
+            - 8080:8080
+        volumes:
+            - ./backend:/app
+            - /app/node_modules
+        networks:
+            - mosaico
+        depends_on:
+            - db
+            

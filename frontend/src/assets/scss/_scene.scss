@@ -1,0 +1,127 @@
+.buttons {
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    top: 20vh;
+
+    #btnZoomIn,
+    #btnZoomOut,
+    #btnResetZoom,
+    #btnFullScreen {
+        > div {
+            background: url('../images/tools.png');
+            width: 30px;
+            height: 30px;
+            background-size: cover;
+        }
+    }
+
+    #btnZoomIn {
+        > div { background-position: 90px 0; }
+        &:hover {
+            > div {
+                background-position: 120px 0;
+            }
+        }
+    }
+    #btnZoomOut {
+        > div { background-position: 30px 0; }
+        &:hover {
+            > div {
+                background-position: 60px 0;
+            }
+        }
+    }
+
+    #btnResetZoom {
+        > div { background-position: 150px 0; }
+        &:hover {
+            > div {
+                background-position: 180px 0;
+            }
+        }
+    }
+
+    #btnFullScreen {
+        > div { background-position: 210px 0; }
+        &:hover {
+            > div {
+                background-position: 240px 0;
+            }
+        }
+    }
+
+    #btnFullScreen.fullscreen {
+        > div { background-position: 270px 0; }
+        &:hover {
+            > div {
+                background-position: 300px 0;
+            }
+        }
+    }
+
+    &.extended {
+        top: 0;
+    }
+
+    button {
+        border: 1px solid white;
+
+        &:hover {
+            border: 1px solid $main_color;
+            cursor: pointer;
+
+            svg {
+                fill: $main_color;
+            }
+        }
+    }
+
+    .btnNoStyles {
+        padding: 7px;
+        background-color: transparent;
+        color: white;
+        outline: none;
+        border: solid 1px white;
+
+        &.max { opacity: 0.3; }
+
+        svg {
+            fill: white;
+            width: 35px;
+            height: 35px;
+        }
+    }
+}
+
+#scene {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    // transform: rotate(90deg);
+
+    canvas{
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        background-color: darkslategrey;
+    }
+}
+
+#orbit {
+    background-image: url('../images/orbita.png');
+    background-position: center center;
+    background-size: 100px 100px;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+
+.splide__slide {
+    border: 0px !important;
+
+    &.is-active {
+        border: 4px solid $main_color !important;
+    }
+}
